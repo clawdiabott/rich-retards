@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rich Retards ($RETRD) — Solana Summer 2026</title>
+  <meta name="description" content="We didn't read the whitepaper. We bought the yacht. Rich Retards on Solana.">
+  <meta property="og:title" content="Rich Retards ($RETRD)">
+  <meta property="og:description" content="We didn't read the whitepaper. We bought the yacht.">
+  <meta property="og:image" content="art/banner.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --pink: #FF6B9D;
+      --teal: #00D4AA;
+      --gold: #FFD700;
+      --orange: #FF8C42;
+      --dark: #0a0a12;
+      --card: #12121f;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--dark);
+      color: #fff;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1a0a1a 0%, #0a1520 50%, #1a1020 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 80%, rgba(255,107,157,0.15) 0%, transparent 60%),
+                  radial-gradient(ellipse at 20% 20%, rgba(0,212,170,0.1) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 800px; }
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(4rem, 12vw, 8rem);
+      background: linear-gradient(180deg, var(--gold) 0%, var(--orange) 50%, var(--pink) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: 0.05em;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+    .ticker {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: var(--teal);
+      margin-bottom: 1.5rem;
+    }
+    .tagline {
+      font-size: clamp(1.1rem, 3vw, 1.5rem);
+      color: #ccc;
+      font-style: italic;
+      margin-bottom: 2.5rem;
+    }
+    .cta-group { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; margin-bottom: 2rem; }
+    .btn {
+      display: inline-block;
+      padding: 1rem 2rem;
+      border-radius: 8px;
+      font-weight: 800;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--pink), var(--orange));
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(255,107,157,0.4);
+    }
+    .btn-secondary {
+      background: transparent;
+      color: var(--teal);
+      border: 2px solid var(--teal);
+    }
+    .ca-box {
+      background: var(--card);
+      border: 1px solid rgba(255,215,0,0.3);
+      border-radius: 12px;
+      padding: 1rem 1.5rem;
+      font-family: monospace;
+      font-size: 0.85rem;
+      color: var(--gold);
+      word-break: break-all;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .ca-label { font-size: 0.7rem; color: #888; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem; }
+    section { padding: 5rem 2rem; max-width: 1000px; margin: 0 auto; }
+    h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5rem;
+      color: var(--pink);
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.05em;
+    }
+    .creed {
+      background: var(--card);
+      border-left: 4px solid var(--gold);
+      padding: 2rem;
+      border-radius: 0 12px 12px 0;
+      font-style: italic;
+      font-size: 1.1rem;
+      line-height: 2;
+      color: #ddd;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .stat {
+      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 12px;
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    .stat-value {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5rem;
+      color: var(--teal);
+    }
+    .stat-label { font-size: 0.85rem; color: #888; text-transform: uppercase; letter-spacing: 0.05em; }
+    .socials { display: flex; gap: 1.5rem; justify-content: center; margin-top: 2rem; }
+    .socials a { color: var(--teal); text-decoration: none; font-weight: 600; }
+    .socials a:hover { color: var(--pink); }
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      color: #555;
+      font-size: 0.8rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    .mascot-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--gold);
+      margin-bottom: 2rem;
+      box-shadow: 0 0 40px rgba(255,215,0,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="hero-content">
+      <img src="art/logo.jpg" alt="Rich Retards Mascot" class="mascot-img">
+      <h1>RICH RETARDS</h1>
+      <div class="ticker">$RETRD</div>
+      <p class="tagline">"We didn't read the whitepaper. We bought the yacht."</p>
+      <div class="cta-group">
+        <a href="https://pump.fun" class="btn btn-primary" id="buy-btn">Buy on Pump.fun</a>
+        <a href="https://t.me/RichRetardsSOL" class="btn btn-secondary">Telegram</a>
+        <a href="https://x.com/RichRetardsSOL" class="btn btn-secondary">Twitter / X</a>
+      </div>
+      <div class="ca-box">
+        <div class="ca-label">Contract Address</div>
+        <span id="ca">LAUNCHING TONIGHT — CA POSTED AT DEPLOY</span>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <h2>The Creed</h2>
+    <div class="creed">
+      I shall not read.<br>
+      I shall not research.<br>
+      I shall not FUD my own bags.<br>
+      I shall buy the top and call it "conviction."<br>
+      I shall die on this hill and the hill shall be made of money.
+    </div>
+  </section>
+
+  <section>
+    <h2>Tokenomics</h2>
+    <div class="stats">
+      <div class="stat"><div class="stat-value">1B</div><div class="stat-label">Total Supply</div></div>
+      <div class="stat"><div class="stat-value">0%</div><div class="stat-label">Team Allocation</div></div>
+      <div class="stat"><div class="stat-value">0%</div><div class="stat-label">Tax</div></div>
+      <div class="stat"><div class="stat-value">100%</div><div class="stat-label">Fair Launch</div></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>What Is This?</h2>
+    <p style="color:#aaa; font-size:1.1rem;">
+      Rich Retards is a meme coin on Solana for everyone who got rich being stupid. No utility. No roadmap. No lies.
+      Just Vice City vibes, GTA preorder day energy, and a community of people who made money by accident and aren't sorry about it.
+    </p>
+    <div class="socials">
+      <a href="https://x.com/RichRetardsSOL">Twitter</a>
+      <a href="https://t.me/RichRetardsSOL">Telegram</a>
+      <a href="https://github.com/clawdiabott/rich-retards">Whitepaper / GitHub</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>$RETRD is a meme token with no intrinsic value. Not financial advice. Not affiliated with Rockstar Games or GTA.</p>
+    <p style="margin-top:0.5rem;">Solana Summer 2026. Be stupid. Get rich. Repeat.</p>
+  </footer>
+
+  <script>
+    // Update CA and buy link after launch:
+    // document.getElementById('ca').textContent = 'YOUR_CA_HERE';
+    // document.getElementById('buy-btn').href = 'https://pump.fun/YOUR_CA_HERE';
+  </script>
+</body>
+</html>
