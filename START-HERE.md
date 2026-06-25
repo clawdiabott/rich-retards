@@ -12,7 +12,8 @@
 | ✅ | Art (logo, banner, mascot, loading screen) |
 | ✅ | All tweets written — copy/paste ready |
 | ✅ | pump.fun metadata JSON |
-| ✅ | Website built |
+| ✅ | Website live: https://clawdiabott.github.io/rich-retards/ |
+| ✅ | GitHub repo: https://github.com/clawdiabott/rich-retards |
 | ✅ | Launch checklist |
 | ✅ | Deploy wallet identified |
 
