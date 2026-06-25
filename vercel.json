@@ -1,0 +1,6 @@
+{
+  "version": 2,
+  "name": "rich-retards",
+  "builds": [{ "src": "website/**", "use": "@vercel/static" }],
+  "routes": [{ "src": "/(.*)", "dest": "/website/$1" }]
+}
